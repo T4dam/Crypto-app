@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import Coins from './coins';
+import Urls from './urls';
 
 
 function App() {
@@ -28,10 +29,12 @@ console.log(filteredCoins)
   return (
     <div className='flex flex-col mt-[64px]'>
       <div className='mb-[64px] flex flex-col justify-center items-center'>
-          <h1 className='pl-4 text-4xl font-black mb-[50px]'>Ieškoti valiutos</h1>
+          <h1 className=' text-4xl font-black mb-[50px]'>100 populiariausių kripto valiutų</h1>
+          <Urls />
+          <h1 className='text-xl mb-[10px]'>Valiutos paieška</h1>
 
       <form>
-        <input type="text" placeholder='Ieškoti' className='w-[300px] h-[50px] border-2 rounded-[4px]' onChange={handleSearch} />
+        <input type="text" placeholder='Ieškoti' className='w-[300px] h-[50px] border-2 rounded-[4px] pl-3' onChange={handleSearch} />
       </form>
       </div>
       <div className='flex items-center justify-center'>
@@ -57,7 +60,7 @@ console.log(filteredCoins)
             priceChange={coin.price_change_percentage_24h}
             volume={coin.total_volume} />
             <div className='w-full'>
-              <div className='h-[1px] bg-slate-900 w-[900px] mx-auto'></div>
+              <div className='h-[1px] bg-slate-300 w-[900px] mx-auto'></div>
             </div>
             </>
           )
