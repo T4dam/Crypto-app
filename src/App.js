@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import Coins from './coins';
-import Urls from './urls';
+import Coins from './components/coins';
+import Urls from './components/urls';
+import Layout from './components/layout'
 
 
 function App() {
@@ -27,6 +28,8 @@ function App() {
 console.log(filteredCoins)
 
   return (
+    <Layout>
+
     <div className='flex flex-col mt-[64px]'>
       <div className='mb-[64px] flex flex-col justify-center items-center'>
           <h1 className=' text-4xl font-black mb-[50px]'>100 populiariausių kripto valiutų</h1>
@@ -67,6 +70,7 @@ console.log(filteredCoins)
         })
       }
     </div>
+      </Layout>
   );
 }
 
