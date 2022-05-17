@@ -26,25 +26,40 @@ function App() {
 console.log(filteredCoins)
 
   return (
-    <div className='coin-app'>
-      <div className='coin-serach'>
-        <h1 className='coin-text'>Ieškoti valiutos</h1>
+    <div className='flex flex-col mt-[64px]'>
+      <div className='mb-[64px] flex flex-col justify-center items-center'>
+          <h1 className='pl-4 text-4xl font-black mb-[50px]'>Ieškoti valiutos</h1>
 
       <form>
-        <input type="text" placeholder='Ieškoti' className='coin-input' onChange={handleSearch} />
+        <input type="text" placeholder='Ieškoti' className='w-[300px] h-[50px] border-2 rounded-[4px]' onChange={handleSearch} />
       </form>
+      </div>
+      <div className='flex items-center justify-center'>
+        <div className='flex w-[900px] font-bold'>
+                  <div className=' min-w-[300px]'>Pavadinimas</div>
+                  <div className='w-[110px] mr-20'>Kaina</div>
+                  <div className='w-[155px] mr-8'>Cirkuliavimas(24h)</div>
+                  <div className='w-[100px]mr-3'>Pokytis(24h)</div>
+                  <div className='w-[230px] text-right '>Kapitalizacija</div>
+              </div>
       </div>
       {
         filteredCoins.map(coin=> {
           return (
+            <>
             <Coins
             key={coin.id}
             name={coin.name}
             image={coin.image}
             symbol={coin.symbol}
-            volume={coin.market_cap}
+            marketCap={coin.market_cap}
             price={coin.current_price}
-            priceChange={coin.price_change_percentage_24h} />
+            priceChange={coin.price_change_percentage_24h}
+            volume={coin.total_volume} />
+            <div className='w-full'>
+              <div className='h-[1px] bg-slate-900 w-[900px] mx-auto'></div>
+            </div>
+            </>
           )
         })
       }
