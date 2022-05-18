@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
 
       
-    <header className='z-50 bg-[#fdfdfe] shadow-xl text-white h-14 flex items-center sticky top-0'>
+    <header className='z-50 bg-[#fdfdfe] shadow-md text-white h-14 flex items-center sticky top-0'>
         <nav className='flex items-center mx-auto justify-between container px-6'>
             <div className='flex items-center gap-1 w-32'>
                     <a className='flex jusitfy-start w-8 h-8 relative'>
@@ -20,8 +20,8 @@ const Navbar = () => {
                         
                     </a>
                     <a className=''>
-                            <h2 className='text-lg font-light text-black font-bold'>
-                                bitMe.lt
+                            <h2 className='text-sm font-light text-black font-bold'>
+                                BitMe.lt
                                 </h2>
                     </a>
             </div>

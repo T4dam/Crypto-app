@@ -32,8 +32,8 @@ console.log(filteredCoins)
 
     <div className='flex flex-col mt-[64px]'>
       <div className='mb-[64px] flex flex-col justify-center items-center'>
-          <h1 className=' text-4xl font-black mb-[50px]'>100 populiariausių kripto valiutų</h1>
           <Urls />
+          <h1 className=' text-4xl font-black mb-[50px]'>100 populiariausių kripto valiutų</h1>
           <h1 className='text-xl mb-[10px]'>Valiutos paieška</h1>
 
       <form>
